@@ -27,11 +27,11 @@ Things you may want to cover:
 
 ## users テーブル
 
-｜Column              | Type  | Options                       |
-｜--------------------|-------|-------------------------------|
-｜name                |string |null: false, foreign_key: true |
-｜email               |string |null: false, foreign_key: true |
-｜encrypted_password  |string |null: false, foreign_key: true |
+｜ Column               | Type   | Options                        |
+｜ -------------------- | ------ | ------------------------------ |
+｜ name                 | string | null: false, foreign_key: true |
+｜ email                | string | null: false, foreign_key: true |
+｜ encrypted_password   | string | null: false, foreign_key: true |
 
 ## Association
 
@@ -41,9 +41,9 @@ Things you may want to cover:
 
 ## rooms テーブル
 
-｜Column | Type  | Options    |
-｜-------|-------|------------|
-｜name   |string |null: false |
+｜ Column  | Type   | Options     |
+｜ ------- | ------ | ----------- |
+｜ name    | string | null: false |
 
 ## Association
 
@@ -56,10 +56,10 @@ Things you may want to cover:
 
 ## room_users テーブル
 
-｜Column | Type      | Options                       |
-｜-------|-----------|-------------------------------|
-｜user   |references |null: false, foreign_key: true |
-｜room   |references |null: false, foreign_key: true |
+｜ Column  | Type       | Options                        |
+｜ ------- | ---------- | ------------------------------ |
+｜ user    | references | null: false, foreign_key: true |
+｜ room    | references | null: false, foreign_key: true |
 
 ## Association
 
@@ -70,11 +70,11 @@ Things you may want to cover:
 ## messages テーブル
 
 
-｜Column  | Type      | Options                       |
-｜--------|-----------|-------------------------------|
-｜content |string     |                               |
-｜user    |references |null: false, foreign_key: true |
-｜room    |references |null: false, foreign_key: true |
+｜ Column   | Type       | Options                        |
+｜ -------- | ---------- | ------------------------------ |
+｜ content  | string     |                                |
+｜ user     | references | null: false, foreign_key: true |
+｜ room     | references | null: false, foreign_key: true |
 
 ## Association
 
