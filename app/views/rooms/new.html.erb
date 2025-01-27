@@ -1,0 +1,30 @@
+<div class='chat-room-form'>
+  <h1>新規チャットルーム</h1>
+  <%=form_with model: @room, local: true do |f|%>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :name, :チャットルーム名, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.select :user_ids, @available_users, {include_blank: "チャットするユーザーを選択してくささい"}%>
+        <%= f.hidden_field :user_ids, value: current_user.id %>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit class: 'chat-room-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
